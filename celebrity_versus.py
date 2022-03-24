@@ -38,20 +38,12 @@ def account_strings():
     account_a_string = f"Compare A: {account_name_a}, a {account_description_a}, from {country_a}."
     account_b_string = f"Against B: {account_name_b}, a {account_description_b}, from {country_b}."
     print(account_a_string + "\n" + account_b_string)
-    # print(f"Compare A: {account_name_a}, a {account_description_a}, from {country_a}.")
-    # print(f"Against B: {account_name_b}, a {account_description_b}, from {country_b}.")
-
-# def add_already_shown():
-#     if account_name_a not in already_shown:
-#         already_shown.append(account_a)
-#     if account_name_b not in already_shown:
-#         already_shown.append(account_b)
 
 account_perimeters(account_a, account_b)
 print(" ")
 print(f"Compare A: {account_name_a}, a {account_description_a}, from {country_a}.")
 print(f"Against B: {account_name_b}, a {account_description_b}, from {country_b}.")
-# account_strings()
+
 guess = input("Who do you think has the most followers on Instagram? Type either A or B. ")
 
 while win:
@@ -83,7 +75,6 @@ while win:
     while account_b in already_shown:
         account_b = random.choice(data)
     
-    # print(already_shown)
     account_perimeters(account_a, account_b)
     account_strings()
     
